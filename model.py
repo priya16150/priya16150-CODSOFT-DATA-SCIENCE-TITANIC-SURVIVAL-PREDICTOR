@@ -16,6 +16,6 @@ def predict_survival(pclass, sex, age, sibsp, parch, fare, embarked):
     features = np.array([[pclass, sex_encoded, age, sibsp, parch, fare, embarked_encoded]])
     
     prediction = model.predict(features)[0]
-    probability = model.predict_proba(features)[0][1]  # probability of survival
+    probability = model.predict_proba(features)[0][1]  
     
     return int(prediction), float(probability)
